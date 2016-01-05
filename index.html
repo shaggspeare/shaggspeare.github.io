@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>Document</title>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+
+  <div class="top-section">
+
+    <video autoplay  poster="img/snapshot.jpg" id="bgvid" loop>
+      <source src="video/video.webm" type="video/webm">
+      <source src="video/video.mp4" type="video/mp4">
+    </video>
+
+    <header class='page-header'>
+      <div class="menu-left">
+       <img src="img/logo-underline.png" alt="U">
+      </div>
+      <div class="search-wrapper">
+              <img class='search-icon' src="img/search.svg" alt="">
+              <input type="search" name="search" id="search" placeholder='Search posts'>
+            </div>  
+      <nav class='nav-main'>
+        <ul>
+          <li><a href="#">My story</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Sign up</a></li>
+          <li><a href="#">Sign in</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="slider">
+      <div class="slider-wrapper">
+        <div id="slideshow" class="slideshow">
+           <div class='slide-write'>
+              <h1>Write</h1>
+              <p>Our platform is the best opportunity for you to <br> <span class="identity">be heard </span>and develop</p>
+              <a class="start-now" href="">Start now</a>
+           </div>
+           <div class='slide-read'>
+              <h1>Read</h1>
+              <p><span class="identity">Discover</span> amazing stories from all over the world,<br>
+              get inspiration for your lifestyle
+              </p>
+              <a class="start-now" href="">Start now</a>
+           </div class='slide-share'>
+            <div>
+              <h1>Share</h1>
+              <p>Find the community which will accept your <br><span class="identity">ideas</span> and develop them</p>
+              <a class="start-now" href="">Start now</a>
+          </div>
+        </div>
+        </div>
+    </div>
+    <svg class="arrows">
+              <path class="a1" d="M0 0 L30 32 L60 0"></path>
+              <path class="a2" d="M0 20 L30 52 L60 20"></path>
+              <path class="a3" d="M0 40 L30 72 L60 40"></path>
+    </svg>
+</div>
+ <!-- top-section ends -->
+
+<div class="story-section">
+
+    <div id="count-test">     
+    </div>
+    <div class='stories-told'>stories were told</div>
+</div>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script  src="js/jQuerySimpleCounter.js"></script>
+<script>
+  $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 200) {
+        $(".page-header").addClass("scrolling");
+    } else {
+        $(".page-header").removeClass("scrolling");
+    }
+});
+</script>
+
+
+ <script>
+ $( document ).ready(function() {
+     $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(3000)
+    .end()
+    .appendTo('#slideshow');
+},  6000);
+  });
+
+ </script>
+ <script>
+
+    $('#count-test').jQuerySimpleCounter({
+      end:357,
+      duration: 15000
+    });
+
+  </script>  
+</body>
+</html>
+
