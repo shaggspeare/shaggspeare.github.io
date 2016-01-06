@@ -330,7 +330,7 @@ video {
   
  }
  h2{
-  padding-top: 20px;
+  padding: 15px 0;
   text-align: center;
   font-weight: 200;
   font-size: 5vw;
@@ -403,7 +403,7 @@ video {
 
 .stats-section{
   margin:auto;
-  height:400px;
+  min-height: 420px;
   background: white;
   text-align: center;
   font-weight: 200;
@@ -440,6 +440,7 @@ video {
   padding: 100px auto;
   font-size: 7vw;
   letter-spacing: 10px;
+  text-align: center;
 }
 .stories-told{
   font-style: italic;
@@ -452,11 +453,59 @@ video {
   font-size: 1.5vw;
   color:#666;;
   padding:10px 50px;
-  border:2px solid #666;;
-  
+  border:2px solid #666;
+
 }
 .stats-section .start-now:hover{
   color: black;
   border:2px solid black;
   
+}
+.people-say-section{
+  background: #F1F1F5;
+}
+.people-saying{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack:center;
+  -webkit-justify-content:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  -webkit-box-align:center;
+  -webkit-align-items:center;
+      -ms-flex-align:center;
+          align-items:center;
+  
+   -webkit-flex-wrap:wrap;
+       -ms-flex-wrap:wrap;
+           flex-wrap:wrap;
+}
+.person{
+  flex-basis:320px;
+  height:320px;
+  min-width: 250px;
+  margin:20px 50px;
+  background: white;
+}
+.person-image{
+  border-radius: 50%;
+  padding: 10px;
+}
+.person-image img{
+  display: block;
+  margin:0 auto;
+  width:150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.person h4{
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+.person p{2  color: #666;
+  padding:10px;
 }
