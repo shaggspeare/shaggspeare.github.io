@@ -7,7 +7,7 @@
   <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  
+  <script>src='js/modernizr-custom.js'</script>
 </head>
 <body>
 
@@ -124,7 +124,7 @@
 
    <div class="stats-section">
   <div class="total">Total</div>
-      <div id="count-test"></div>
+      <div id="counter"></div>
       <div class='stories-told'>stories were told</div>
       <div class="tell-story"><a class="start-now" href="#">Tell yours now</a></div>
   </div>
@@ -138,7 +138,7 @@
           <img src="img/person-1.jpg" alt="">
         </div>
         <h4>Wayne Rodgers</h4>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, accusantium quasi fuga perspiciatis ipsum amet rem fugit optio illum sint."</p>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, accusantium quasi fuga perspiciatis ."</p>
       </div> 
 
       <div class="person">
@@ -146,7 +146,7 @@
           <img src="img/person-2.jpg" alt="">
         </div>
         <h4>Jane Doe</h4>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, vitae. Dolore ad, at eaque commodi suscipit. Ipsa reprehenderit vel blanditiis."</p>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, vitae. Dolore ad, at eaque commodi suscipit."</p>
       </div>
 
       <div class="person">
@@ -154,12 +154,39 @@
           <img src="img/person-3.JPG" alt="">
         </div>
         <h4>David Coleman</h4>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim culpa repellat ipsam quis. Explicabo ad, a voluptatem! Distinctio, omnis, aliquid!"</p>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim culpa repellat ipsam quis. Explicabo ad, a voluptatem!"</p>
       </div>
 
     </div>
 </div>
-  
+<div class="signing-section">
+  <h2>Sign up / log in</h2>
+  <div class="form-wrapper">
+    <form action="echo">            
+            <input type="text" name="your-name" id="your-name" placeholder="Enter your name" required> 
+              <div class="halfsizes-wrapper">
+              <div class="your-nickname half-size">
+                <input type="text" name="your-nickname" id="your-nickname" placeholder="Enter your nickname" required>
+              </div>
+              <div class="your-email half-size">
+                <input type="email" name="your-email" id="your-email" placeholder="Enter your e-mail" required>
+              </div>
+            </div>
+            <textarea rows="5" cols="30" placeholder="Leave your comment"></textarea>                      
+            <input type="submit" value="Sign in">
+          </form> 
+    </form>
+  </div>  
+</div>  
+<footer class="main-footer">
+  <div class="copyright">&copy; 2015 Underline Inc. All Right Reserved</div>
+  <div class="icons">
+    <a href="#"><img src="img/Facebook.svg" alt=""></a>
+    <a href="#"><img src="img/Pinterest.svg" alt=""></a>
+    <a href="#"><img src="img/Instagram.svg" alt=""></a>
+    <a href="#"><img src="img/Twitter.svg" alt=""></a>
+  </div>
+</footer>
 
 
 
@@ -205,7 +232,7 @@ setInterval(function() {
  </script>
  <script>
 
-    $('#count-test').jQuerySimpleCounter({
+    $('#counter').jQuerySimpleCounter({
       end:357,
       duration: 15000
     });
