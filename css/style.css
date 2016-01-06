@@ -57,7 +57,7 @@ video {
 }
 
 .page-header{
-  
+  padding: 0px 30px;
   position: fixed;
   width:100vw;
   top:0;
@@ -66,9 +66,8 @@ video {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content:space-around;
-      -ms-flex-pack:distribute;
-          justify-content:space-around;
+  
+          justify-content:space-between;
   -webkit-box-align:center;
   -webkit-align-items:center;
       -ms-flex-align:center;
@@ -88,8 +87,8 @@ video {
   padding: 5px 10px ;
 }
 .menu-left img{
-  width:50px;
-  height:50px;
+  width:3vw;
+  
 }
 
 .search-wrapper{
@@ -137,13 +136,13 @@ video {
 
 
 .search-icon{
-  width:30px;
+  width:1.5vw;
   position: absolute;
-  top:10px;
-  left:10px;
+  top:0.8vw;
+  left:0.8vw;
 }
  input[type=search]{
-  font: 20px 'Raleway', Helvetica, Arial, sans-serif;
+  font: 1.3vw 'Raleway', Helvetica, Arial, sans-serif;
   background: rgba(0,0,0,0);
   color:white;
   border:none;
@@ -152,7 +151,7 @@ video {
 }
 
 .nav-main {
-  padding-right: 20px;
+  padding-right: 5px;
 }
 
 .nav-main li {
@@ -216,7 +215,7 @@ video {
   
 }
 .slider-wrapper{
-  padding-top: 200px;
+  padding-top: 25vh;
 }
 .slideshow {
     text-align: center; 
@@ -326,7 +325,7 @@ video {
 /*hot-stories-section*/
 
 .hot-stories-section{
-  background: #F1F1F5;
+  background: #ECF0F1;
   
  }
  h2{
@@ -338,17 +337,18 @@ video {
  }
 .user-stories{
   display: flex;
-  justify-content:space-around;
+  justify-content:center;
   align-items:center;
   flex-wrap:wrap;
+  padding: 10px 20px;
 
 }
 .user-story{
-  min-width: 200px;
+  
   flex-basis:300px;
-    background: white;
+ background: white;
   height:300px;
-  margin:20px;
+  margin:20px 15px;
   color: white;
   text-align: center;
   display: flex;
@@ -360,35 +360,63 @@ video {
 .first-story{
   background: url(../img/work-1.jpg) no-repeat;
   background-size: cover;
+  
 }
 .second-story{
   background: url(../img/work-2.jpg) no-repeat;
   background-size: cover;
+  
 }
 .third-story{
   background: url(../img/work-3.jpg) no-repeat;
   background-size: cover;
+  
 }
 .fourth-story{
   background: url(../img/work-4.jpg) no-repeat;
   background-size: cover;
+  
 }
 .fifth-story{
   background: url('../img/work-5.jpg') no-repeat;
   background-size: cover;
+  
 }
 .sixth-story{
   background: url('../img/work-6.jpg') no-repeat;
   background-size: cover;
+  
 }
 .seventh-story{
   background: url('../img/work-7.jpg') no-repeat;
   background-size: cover;
+  
 }
-.eights-story{
+.eighth-story{
   background: url('../img/work-8.jpg') no-repeat;
   background-size: cover;
+  
 }
+/*vertical orientation of blocks for big screens*/
+@media (min-width: 1600px) {
+  .user-stories{
+    padding: 10px 100px;
+  }
+  .first-story,
+  .third-story{
+    flex-grow:3;
+  }
+  .sixth-story,
+  .eighth-story { 
+      flex-grow:3;
+  }
+  .seventh-story{
+    flex-grow:2;
+  }
+}
+
+
+
 .user-story h3{
   font-size: 2vw;
   text-shadow:2px 2px 1px black;
@@ -404,7 +432,7 @@ video {
 .stats-section{
   margin:auto;
   min-height: 420px;
-  background: white;
+  background: #111;
   text-align: center;
   font-weight: 200;
   font-size: 4vw;
@@ -434,7 +462,7 @@ video {
   text-align: center;
   font-weight: 200;
   font-size: 5vw;
-  color:#666;
+  color:white;
 }
 #count-test{
   padding: 100px auto;
@@ -444,25 +472,26 @@ video {
 }
 .stories-told{
   font-style: italic;
-  font-size: 3vw;
+  font-size: 2vw;
   color:#666;
 }
 .stats-section .start-now{
   text-align: center;
   font-weight: 700;
   font-size: 1.5vw;
-  color:#666;;
+  color:#fff;
   padding:10px 50px;
-  border:2px solid #666;
+  border:2px solid #fff;
 
 }
 .stats-section .start-now:hover{
-  color: black;
-  border:2px solid black;
+  color: #FFA200;
+  border:2px solid #FFA200;
   
 }
 .people-say-section{
   background: #F1F1F5;
+  padding-bottom: 50px;
 }
 .people-saying{
   display: -webkit-box;
@@ -488,6 +517,7 @@ video {
   min-width: 250px;
   margin:20px 50px;
   background: white;
+
 }
 .person-image{
   border-radius: 50%;
@@ -501,6 +531,7 @@ video {
   border-radius: 50%;
 }
 .person h4{
+  font-size: 1.3vw;
   text-align: center;
   font-weight: bold;
   padding-bottom: 20px;
