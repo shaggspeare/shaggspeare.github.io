@@ -35,7 +35,9 @@ body {
   
 }
 .top-section{
-    
+    background: 
+                 rgba(0, 0, 0, 0.4);
+  background-size: cover;
     height: 100vh;
 
 }
@@ -164,15 +166,13 @@ video {
 .nav-main li a {
   font-size: 1.3vw;
   margin: 0 5px;
-  padding: 10px ;
+  padding: 7px ;
   color:white;
   -webkit-transition: color 0.5s ease-out ;
      
      transition: color 0.5s ease-out ;
 }
-.nav-main .my-story{
-  color:#FFA200;
-}
+
 .nav-main li a:hover{
   color:#FFA200;
 }
@@ -188,7 +188,7 @@ video {
   transition: top 0.3s;
 }
 
-.nav-main li a::after {
+.nav-link::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -200,14 +200,32 @@ video {
   transition: height 0.3s;
 }
 
-.nav-main li a:hover::before {
+.nav-link:hover::before {
   top: 100%;
   opacity: 1;
 }
 
-.nav-main li a:hover::after {
+.nav-link:hover::after {
   height: 100%;
 } 
+
+.nav-main .my-story{
+  color:#FFA200;
+}
+
+.dropdown-list{
+  position: relative;
+}
+.dropdown-list:hover{
+  
+}
+.dropdown-list img{
+  position: absolute;
+  bottom: 0.4vw;
+  right: 0.4vw;
+}
+
+
 
 
 .slider{
@@ -329,18 +347,18 @@ video {
   
  }
  h2{
-  padding: 15px 0;
+  padding:20px;
   text-align: center;
   font-weight: 700;
-  font-size: 4vw;
-  color:#666;
+  font-size: 3vw;
+  color:#222;
  }
 .user-stories{
   display: flex;
   justify-content:center;
   align-items:center;
   flex-wrap:wrap;
-  padding: 10px 20px;
+  padding:  20px;
 
 }
 .user-story{
@@ -348,54 +366,72 @@ video {
   flex-basis:300px;
  background: white;
   height:300px;
-  margin:20px 15px;
+  margin: 15px;
   color: white;
   text-align: center;
   display: flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  padding: 10px 5px;
+  padding: 10px ;
+  position: relative;
 }
 .first-story{
-  background: url(../img/work-1.jpg) no-repeat;
-  background-size: cover;
-  
+  background:linear-gradient(
+                 rgba(0, 0, 0, 0.5), 
+                 rgba(0, 0, 0, 0.5)),
+            url(../img/work-1.jpg);
+  background-size: cover;            
 }
 .second-story{
-  background: url(../img/work-2.jpg) no-repeat;
+  background:linear-gradient(
+                 rgba(0, 0, 0, 0.5), 
+                 rgba(0, 0, 0, 0.5)),
+            url(../img/work-2.jpg);
   background-size: cover;
   
 }
 .third-story{
-  background: url(../img/work-3.jpg) no-repeat;
+  background:linear-gradient(
+                 rgba(0, 0, 0, 0.5), 
+                 rgba(0, 0, 0, 0.5)),
+            url(../img/work-3.jpg);
   background-size: cover;
-  
 }
 .fourth-story{
-  background: url(../img/work-4.jpg) no-repeat;
+ background:linear-gradient(
+                 rgba(0, 0, 0, 0.5), 
+                 rgba(0, 0, 0, 0.5)),
+            url(../img/work-4.jpg);
   background-size: cover;
-  
 }
 .fifth-story{
-  background: url('../img/work-5.jpg') no-repeat;
+  background:linear-gradient(
+                 rgba(0, 0, 0, 0.5), 
+                 rgba(0, 0, 0, 0.5)),
+            url(../img/work-5.jpg);
   background-size: cover;
-  
 }
 .sixth-story{
-  background: url('../img/work-6.jpg') no-repeat;
-  background-size: cover;
-  
+ background:linear-gradient(
+                 rgba(0, 0, 0, 0.5), 
+                 rgba(0, 0, 0, 0.5)),
+            url(../img/work-6.jpg);
+  background-size: cover; 
 }
 .seventh-story{
-  background: url('../img/work-7.jpg') no-repeat;
+background:linear-gradient(
+                 rgba(0, 0, 0, 0.5), 
+                 rgba(0, 0, 0, 0.5)),
+            url(../img/work-7.jpg);
   background-size: cover;
-  
 }
 .eighth-story{
-  background: url('../img/work-8.jpg') no-repeat;
+ background:linear-gradient(
+                 rgba(0, 0, 0, 0.5), 
+                 rgba(0, 0, 0, 0.5)),
+            url(../img/work-8.jpg);
   background-size: cover;
-  
 }
 /*vertical orientation of blocks for big screens*/
 @media (min-width: 1600px) {
@@ -413,26 +449,32 @@ video {
   .seventh-story{
     flex-grow:2;
   }
+  .user-story h3{
+  font-size: 1.3vw;
+  }
 }
 
 
 
 .user-story h3{
-  font-size: 2vw;
+  font-size: 1.7vw;
   text-shadow:2px 2px 1px black;
   font-weight: 400;
 }
 .story-author{
-  padding-top: 20px;
+  font-size: 1vw;
+  padding: 20px ;
   align-self:flex-end;
   text-align: right;
   text-shadow:1px 1px 1px black;
+  position: absolute;
+  bottom:0;
 }
 
 
 .stats-section{
   margin:auto;
-  min-height: 450px;
+  min-height: 350px;
   padding-bottom: 20px;
   background: #111;
   text-align: center;
@@ -459,23 +501,24 @@ video {
        -ms-flex-wrap:wrap;
            flex-wrap:wrap;
 }
-.total{
+/*.total{
   text-align: center;
-  font-weight: 700;
-  font-size: 4vw;
+  font-style: italic;
+  font-size: 5vw;
   color:#999;
-}
+}*/
 #counter{
-  padding: 20px auto;
-  font-size: 7vw;
-  letter-spacing: 10px;
-  text-align: center;
+  font-size: 6vw;
+  letter-spacing: 20px;
+  padding-left: 20px;
   color:white;
 }
 .stories-told{
   font-style: italic;
   font-size: 2vw;
   color:#999;
+  text-align: center;
+  margin-top: 15px;
 }
 
 .stats-section .start-now{
@@ -483,7 +526,7 @@ video {
   font-weight: 700;
   font-size: 1.5vw;
   color:#FFA200;
-  padding:15px 50px;
+  padding:15px 35px;
   border:2px solid #FFA200;
   -webkit-transition: background 0.7s ease-out ;
           transition: background 0.7s ease-out ;
@@ -583,11 +626,16 @@ video {
     outline: none;
     border:1px solid rgb(156, 154, 155);
     vertical-align: middle;
-    font-weight: 200;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    font-weight: 400;
     font-size: 1vw;
-    color: #FFA200;
+    
 }
-
+.signing-section input:focus,
+.signing-section textarea:focus {
+  border:2px solid black;
+  color: black;
+}
 .halfsizes-wrapper{
   display: flex;
   justify-content:center;
@@ -606,7 +654,7 @@ video {
   display: inline-block;
   width:20vw;
  text-align: center;
-  font-weight: 200;
+  font-weight: 700;
   font-size: 2vw;
   color:#FFA200;
   padding:15px 50px;
@@ -625,7 +673,7 @@ video {
 
 
 .main-footer{
-  padding: 30px;
+  padding: 25px;
   background: #555;
   display: flex;
   justify-content:center;
@@ -650,6 +698,6 @@ video {
 .icons img {
   width:30px;
   height: 30px;
-  margin: 0 10px;
+  margin: 0 20px;
 }
 
