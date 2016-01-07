@@ -23,18 +23,27 @@
        <img src="img/logo-underline.png" alt="U">
       </div>
       <div class="search-wrapper">
-              <img class='search-icon' src="img/search.svg" alt="">
+              
               <input type="search" name="search" id="search" placeholder='Search posts'>
-            </div>  
+      </div>  
       <nav class='nav-main'>
         <ul>
-          <li><a class='my-story nav-link' href="#">My story</a></li>
-          <li><a class="nav-link" href="#">About</a></li>
-          <li class="dropdown-list"><a href="#">Help</a>
+          <li><a class='my-story nav-link link' href="#">My story</a></li>
+          <li><a class="nav-link link" href="#">About</a></li>
+
+          <li class="dropdown-list "><a class='link' href="#">Help</a>
              <img src="img/myarr.svg" alt="">
+              <ul class="dropdown-inside">
+                   <li><a href="#">How to use </a></li>
+                   <li><a href="#">Community</a></li>
+                   <li><a href="#">FAQ</a></li>
+                   <li><a href="#">Rules</a></li>
+                   <li><a href="#">Donate</a></li>
+              </ul>
           </li>
-          <li><a class="nav-link" href="#">Sign up</a></li>
-          <li><a class="nav-link" href="#">Sign in</a></li>
+
+          <li><a class="nav-link link" href="#">Sign up</a></li>
+          <li><a class="nav-link link" href="#">Sign in</a></li>
         </ul>
       </nav>
     </header>
@@ -75,51 +84,51 @@
     <h2>Hot stories:</h2>
     <div class="user-stories">
 
-      <div class="user-story first-story">
+      <a href="#" class="user-story first-story">
         <h3 class="story-title">What I learned from watching "Breaking Bad".</h3>
         <span class="story-author">by Jane Doe</span>
-      </div>
+      </a>
       
 
-      <div class="user-story second-story">
+      <a href="#" class="user-story second-story">
         <h3 class="story-title">New generation of geeks.</h3>
         <span class="story-author">by Marcus Wisdom</span>
-      </div>
+      </a>
       
 
-      <div class="user-story third-story">
+      <a href="#" class="user-story third-story">
         <h3 class="story-title">Third year in a row</h3>
         <span class="story-author">by Josh Potts</span>
-      </div>
+      </a>
       
 
-      <div class="user-story fourth-story">
+      <a href="#" class="user-story fourth-story">
         <h3 class="story-title">How to increase popularity in social newtworks.</h3>
         <span class="story-author">by Annie Smith</span>
-      </div>
+      </a>
       
-      <div class="user-story fifth-story">
+      <a href="#" class="user-story fifth-story">
         <h3 class="story-title">Experience of working abroad.</h3>
         <span class="story-author">by Thomas Dean</span>
-      </div>
+      </a>
       
       
-      <div class="user-story sixth-story">
+      <a href="#" class="user-story sixth-story">
         <h3 class="story-title">Want to learn Javascript in 2016?</h3>
         <span class="story-author">by Wayne Williams</span>
-      </div>
+      </a>
       
       
-      <div class="user-story seventh-story">
+      <a href="#" class="user-story seventh-story">
         <h3 class="story-title">Review on "Star Wars: Force Awakens."</h3>
         <span class="story-author">by Michael Bay</span>
-      </div>
+      </a>
       
       
-      <div class="user-story eighth-story">
+      <a href="#" class="user-story eighth-story">
         <h3 class="story-title">What is crowdfunding?</h3>
         <span class="story-author">by Emilie Bardem</span>
-      </div>
+      </a>
       
     </div>
   </div>
@@ -208,9 +217,13 @@
     var scroll = $(window).scrollTop();
 
     if (scroll >= 200) {
-        $(".page-header").addClass("scrolling");
+        $(".page-header,.dropdown-inside, .dropdown-inside a ").addClass("scrolling");
+        
+         
     } else {
         $(".page-header").removeClass("scrolling");
+        $(".dropdown-inside ").removeClass("scrolling");
+        $(".dropdown-inside a ").removeClass("scrolling");
     }
 });
 </script>

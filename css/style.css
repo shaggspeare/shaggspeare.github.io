@@ -82,7 +82,8 @@ video {
 
 }
 .page-header.scrolling {
-    background: rgba(0,0,0,0.8);
+    background: #222;
+    box-shadow: 2px 0px 2px black;
 
 }
 .menu-left{
@@ -137,33 +138,27 @@ video {
 } 
 
 
-.search-icon{
-  width:1.5vw;
-  position: absolute;
-  top:0.8vw;
-  left:0.8vw;
-}
  .search-wrapper input[type=search]{
   font: 1.3vw 'Raleway', Helvetica, Arial, sans-serif;
   background: rgba(0,0,0,0);
   color:white;
   border:none;
   outline: none;
-  margin-left:30px;
+  
 }
 
 .nav-main {
   padding-right: 5px;
 }
 
-.nav-main li {
+.nav-main>ul>li {
   padding:10px 20px;
   display:inline-block;
   position: relative;
   
 }
 
-.nav-main li a {
+.link{
   font-size: 1.3vw;
   margin: 0 5px;
   padding: 7px ;
@@ -173,10 +168,10 @@ video {
      transition: color 0.5s ease-out ;
 }
 
-.nav-main li a:hover{
+.link:hover{
   color:#FFA200;
 }
-.nav-main li a::before {
+.link::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -215,9 +210,10 @@ video {
 
 .dropdown-list{
   position: relative;
-}
-.dropdown-list:hover{
   
+}
+.dropdown-list.scrolling{
+  color: #555;
 }
 .dropdown-list img{
   position: absolute;
@@ -225,7 +221,37 @@ video {
   right: 0.4vw;
 }
 
+ .dropdown-inside {
+ position: absolute;
+ left: -9999px;
+ border-bottom: 2px solid white;
+ border-left: 2px solid white;
+ padding:5px;
+ }
 
+ .dropdown-inside.scrolling{
+  background: #222;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+.dropdown-inside li{
+  padding: 10px ;
+}
+.dropdown-inside a{
+  color: white;
+  font-size: 0.93vw;
+}
+.dropdown-inside a.scrolling{
+  color: white;
+}
+.dropdown-list:hover .dropdown-inside {
+   display: block;
+ left: 0;
+ }
+ .dropdown-inside:hover{
+  color: #FFA200;
+ }
 
 
 .slider{
@@ -362,9 +388,8 @@ video {
 
 }
 .user-story{
-  
   flex-basis:300px;
- background: white;
+  background: white;
   height:300px;
   margin: 15px;
   color: white;
@@ -376,12 +401,21 @@ video {
   padding: 10px ;
   position: relative;
 }
+
 .first-story{
   background:linear-gradient(
                  rgba(0, 0, 0, 0.5), 
                  rgba(0, 0, 0, 0.5)),
             url(../img/work-1.jpg);
-  background-size: cover;            
+  background-size: cover;
+             
+}
+.first-story:hover{
+  background: linear-gradient(
+                  rgba(255, 162, 0, 0.7),
+                  rgba(255, 162, 0, 0.7)),
+              url(../img/work-1.jpg);
+  background-size: cover;
 }
 .second-story{
   background:linear-gradient(
@@ -391,11 +425,25 @@ video {
   background-size: cover;
   
 }
+.second-story:hover{
+    background: linear-gradient(
+                  rgba(255, 162, 0, 0.7),
+                  rgba(255, 162, 0, 0.7)),
+              url(../img/work-2.jpg);
+  background-size: cover;
+}
 .third-story{
   background:linear-gradient(
                  rgba(0, 0, 0, 0.5), 
                  rgba(0, 0, 0, 0.5)),
             url(../img/work-3.jpg);
+  background-size: cover;
+}
+.third-story:hover{
+    background: linear-gradient(
+                  rgba(255, 162, 0, 0.7),
+                  rgba(255, 162, 0, 0.7)),
+              url(../img/work-3.jpg);
   background-size: cover;
 }
 .fourth-story{
@@ -405,11 +453,25 @@ video {
             url(../img/work-4.jpg);
   background-size: cover;
 }
+.fourth-story:hover{
+    background: linear-gradient(
+                  rgba(255, 162, 0, 0.7),
+                  rgba(255, 162, 0, 0.7)),
+              url(../img/work-4.jpg);
+  background-size: cover;
+}
 .fifth-story{
   background:linear-gradient(
                  rgba(0, 0, 0, 0.5), 
                  rgba(0, 0, 0, 0.5)),
             url(../img/work-5.jpg);
+  background-size: cover;
+}
+.fifth-story:hover{
+    background: linear-gradient(
+                  rgba(255, 162, 0, 0.7),
+                  rgba(255, 162, 0, 0.7)),
+              url(../img/work-5.jpg);
   background-size: cover;
 }
 .sixth-story{
@@ -419,11 +481,25 @@ video {
             url(../img/work-6.jpg);
   background-size: cover; 
 }
+.sixth-story:hover{
+    background: linear-gradient(
+                  rgba(255, 162, 0, 0.7),
+                  rgba(255, 162, 0, 0.7)),
+              url(../img/work-6.jpg);
+  background-size: cover;
+}
 .seventh-story{
 background:linear-gradient(
                  rgba(0, 0, 0, 0.5), 
                  rgba(0, 0, 0, 0.5)),
             url(../img/work-7.jpg);
+  background-size: cover;
+}
+.seventh-story:hover{
+    background: linear-gradient(
+                  rgba(255, 162, 0, 0.7),
+                  rgba(255, 162, 0, 0.7)),
+              url(../img/work-7.jpg);
   background-size: cover;
 }
 .eighth-story{
@@ -432,6 +508,13 @@ background:linear-gradient(
                  rgba(0, 0, 0, 0.5)),
             url(../img/work-8.jpg);
   background-size: cover;
+}
+.eighth-story:hover{
+    background: linear-gradient(
+                  rgba(255, 162, 0, 0.7),
+                  rgba(255, 162, 0, 0.7)),
+              url(../img/work-8.jpg);
+  background-size: cover;;
 }
 /*vertical orientation of blocks for big screens*/
 @media (min-width: 1600px) {
@@ -442,12 +525,17 @@ background:linear-gradient(
   .third-story{
     flex-grow:3;
   }
+  .second-story,
+  .fourth-story {
+    height:400px;
+  }
   .sixth-story,
   .eighth-story { 
       flex-grow:3;
   }
   .seventh-story{
     flex-grow:2;
+    height:400px;
   }
   .user-story h3{
   font-size: 1.3vw;
@@ -456,19 +544,21 @@ background:linear-gradient(
 
 
 
-.user-story h3{
+ h3{
   font-size: 1.7vw;
   text-shadow:2px 2px 1px black;
   font-weight: 400;
 }
 .story-author{
-  font-size: 1vw;
+  font-size: 1.3vw;
+  font-style: italic;
   padding: 20px ;
   align-self:flex-end;
   text-align: right;
   text-shadow:1px 1px 1px black;
   position: absolute;
   bottom:0;
+  right:0;
 }
 
 
@@ -623,18 +713,20 @@ background:linear-gradient(
     margin: 0 0 15px 0;
     padding: 15px 20px;
     width: 95%;
-    outline: none;
-    border:1px solid rgb(156, 154, 155);
+    outline: 1px solid rgb(156, 154, 155);
+    border:1px solid white;
     vertical-align: middle;
     font-family: 'Raleway', Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size: 1vw;
-    
+    box-sizing: border-box;
 }
 .signing-section input:focus,
 .signing-section textarea:focus {
-  border:2px solid black;
+  border:1px solid black;
+  outline:1px solid black;
   color: black;
+  
 }
 .halfsizes-wrapper{
   display: flex;
@@ -651,13 +743,14 @@ background:linear-gradient(
 }
 
 .signing-section input[type="submit"] { 
+  outline: none;
   display: inline-block;
   width:20vw;
  text-align: center;
   font-weight: 700;
   font-size: 2vw;
   color:#FFA200;
-  padding:15px 50px;
+  padding:15px 40px;
   border:2px solid #FFA200;
   -webkit-transition: background 0.7s ease-out ;
          transition: background 0.7s ease-out ;
@@ -673,7 +766,7 @@ background:linear-gradient(
 
 
 .main-footer{
-  padding: 25px;
+  padding: 20px;
   background: #555;
   display: flex;
   justify-content:center;
@@ -700,4 +793,6 @@ background:linear-gradient(
   height: 30px;
   margin: 0 20px;
 }
+
+
 
