@@ -1,10 +1,7 @@
 *{
   box-sizing: border-box;
 }
-img.responsive {
-  display: block;
-  height: auto;
-  max-width: 100%; }
+
 
 a, a:hover, a:active, a:focus, a:visited {
   text-decoration: none;
@@ -27,12 +24,10 @@ textarea {
     box-sizing: border-box;
 }
 
-
-
 body {
   min-width: 320px;
   font: 16px 'Raleway', Helvetica, Arial, sans-serif;
-  
+
 }
 .top-section{
     background: 
@@ -228,14 +223,21 @@ video {
  border-left: 2px solid white;
  padding:5px;
  }
-
+.dropdown-inside:hover{
+  color: #FFA200;
+ }
  .dropdown-inside.scrolling{
   background: #222;
   border-bottom: 2px solid transparent;
   border-left: 2px solid transparent;
   border-right: 2px solid transparent;
 }
-.dropdown-inside li{
+
+.dropdown-list:hover .dropdown-inside {
+   display: block;
+ left: 0;
+ }
+ .dropdown-inside li{
   padding: 10px ;
 }
 .dropdown-inside a{
@@ -245,14 +247,9 @@ video {
 .dropdown-inside a.scrolling{
   color: white;
 }
-.dropdown-list:hover .dropdown-inside {
-   display: block;
- left: 0;
- }
- .dropdown-inside:hover{
+.dropdown-inside a:hover{
   color: #FFA200;
- }
-
+}
 
 .slider{
   width: 100%;
@@ -627,6 +624,7 @@ background:linear-gradient(
   
 }
 .people-say-section{
+  padding: 0 100px;
   background: #F1F1F5;
   padding-bottom: 50px;
 }
@@ -654,7 +652,7 @@ background:linear-gradient(
   min-width: 250px;
   margin:20px ;
   background: white;
-
+  flex-grow:2;
 }
 .person-image{
   border-radius: 50%;
@@ -710,8 +708,8 @@ background:linear-gradient(
 }
 .signing-section input,
 .signing-section textarea {
-    margin: 0 0 15px 0;
-    padding: 15px 20px;
+    margin: 0 0 30px 0;
+    padding: 15px 20px ;
     width: 95%;
     outline: 1px solid rgb(156, 154, 155);
     border:1px solid white;
@@ -754,9 +752,7 @@ background:linear-gradient(
   border:2px solid #FFA200;
   -webkit-transition: background 0.7s ease-out ;
          transition: background 0.7s ease-out ;
-    
   background: #fff;    
-    
 }
 
 .signing-section input[type="submit"]:hover{
