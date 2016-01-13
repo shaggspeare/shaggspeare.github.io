@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Begin your journey</title>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:200,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/your-story.css">
+</head>
+<body>
+	<div class="top-section">
+     <header class='page-header'>
+      <div class="menu-left">
+       <a href="index.html"><img src="img/logo-underline.png" alt="U"></a>
+      </div>
+       
+      <nav class='nav-main'>
+        <ul>
+          <li><a class='my-story nav-link link' href="your-story.html">My story</a></li>
+          <li><a class="nav-link link" href="index.html">Main</a></li>
+
+          <li class="dropdown-list "><a class='link' href="#">Help</a>
+             <img src="img/myarr.svg" alt="">
+              <ul class="dropdown-inside">
+                   <li><a href="#">How to use </a></li>
+                   <li><a href="#">Community</a></li>
+                   <li><a href="#">FAQ</a></li>
+                   <li><a href="#">Rules</a></li>
+                   <li><a href="#">Donate</a></li>
+              </ul>
+          </li>
+
+          <li><a class="nav-link link" href="find-us.html">Contact us</a></li>
+          <li><a class="nav-link link" href="index.html#signing">Sign in</a></li>
+        </ul>
+      </nav>
+    </header>
+   </div>
+   <div class="your-own-story">
+   		<h1 class="adventure">Begin your own adventure</h1>
+				
+				<input type="text" name="name" id="name" placeholder="Title">
+				
+				<textarea name="writing" id="writing" cols="20" rows="8" placeholder="Tell your story"></textarea>
+				<button onclick="displayPost()">Post</button>
+			</div>
+			<div id="displayPost" class="displayPost"></div>
+   </div>
+   <script>
+   	function displayPost(){
+			
+			alert("Hooah! Your story was successfully posted!") ;
+			
+		}
+   </script> 
+</body>
+</html>

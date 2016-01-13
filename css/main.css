@@ -1,6 +1,3 @@
-*{
-    box-sizing: border-box;
-}
 
 
 a,
@@ -343,7 +340,7 @@ video{
     }
 }
 
-@-webkit-keyframes arrow 
+@-webkit-keyframes arrow {
     0%
     {
         opacity: 0;
@@ -383,6 +380,8 @@ video{
 
 .hot-stories-section{
     background: #ecf0f1;
+    text-align: center;
+    padding-bottom: 30px;
 }
 h2
 {
@@ -630,10 +629,7 @@ h2
         -ms-flex-positive: 3;
                 flex-grow: 3;
     }
-    .second-story,
-    .fourth-story    {
-        height: 400px;
-    }
+   
     .sixth-story,
     .eighth-story    {
         -webkit-box-flex: 3;
@@ -642,8 +638,6 @@ h2
                 flex-grow: 3;
     }
     .seventh-story    {
-        height: 400px;
-
         -webkit-box-flex: 2;
         -webkit-flex-grow: 2;
         -ms-flex-positive: 2;
@@ -659,7 +653,7 @@ h2
 h3{
     font-size: 1.7vw;
     font-weight: 400;
-    text-shadow: 2px 2px 1px black;
+    text-shadow: 1px 1px 1px black;
 }
 .story-author{
     font-size: 1.3vw;
@@ -673,6 +667,23 @@ h3{
     -webkit-align-self: flex-end;
     -ms-flex-item-align: end;
             align-self: flex-end;
+}
+.see-all{
+    display: inline-block;
+    
+    font-size: 2vw;
+    font-weight: 700;
+    padding: 15px 75px;
+    -webkit-transition: background .7s ease-out ;
+            transition: background .7s ease-out ;
+    text-align: center;
+    color: #ffa200;
+    border: 2px solid #ffa200;
+    
+}
+.see-all:hover{
+    color: white;
+    background: #ffa200;
 }
 
 
@@ -764,7 +775,9 @@ h3{
             flex-wrap: wrap;
 }
 .person{
+    box-sizing: border-box;
     min-width: 200px;
+    min-height: 200px;
     height: 350px;
     margin: 20px ;
     background: white;
@@ -795,7 +808,7 @@ h3{
     text-decoration: underline;
 }
 .person p{
-    padding: 15px;
+    padding: 10px 40px;
     color: #666;
 }
 

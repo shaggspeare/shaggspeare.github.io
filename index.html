@@ -6,29 +6,24 @@
   <title>UL the blog platform</title>
   <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script src='js/modernizr-custom.js'></script>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <video autoplay  poster="img/snapshot.jpg" id="bgvid" loop>
+  <video autoplay  poster="img/snapshot.jpg" loop>
       <source src="video/video.webm" type="video/webm">
       <source src="video/video.mp4" type="video/mp4">
     </video>
-  <div class="top-section">
-
-    
-
-    <header class='page-header'>
+    <div class="top-section">
+     <header class='page-header'>
       <div class="menu-left">
-       <img src="img/logo-underline.png" alt="U">
+       <a href="index.html"><img src="img/logo-underline.png" alt="U"></a>
       </div>
       <div class="search-wrapper">
-              
-              <input type="search" name="search" id="search" placeholder='Search posts'>
+            <input type="search" name="search" id="search" placeholder='Search posts'>
       </div>  
       <nav class='nav-main'>
         <ul>
-          <li><a class='my-story nav-link link' href="#">My story</a></li>
+          <li><a class='my-story nav-link link' href="your-story.html">My story</a></li>
           <li><a class="nav-link link" href="index.html">Main</a></li>
 
           <li class="dropdown-list "><a class='link' href="#">Help</a>
@@ -43,7 +38,7 @@
           </li>
 
           <li><a class="nav-link link" href="find-us.html">Contact us</a></li>
-          <li><a class="nav-link link" href="#signing">Sign in</a></li>
+          <li><a class="nav-link link" href="index.html#signing">Sign in</a></li>
         </ul>
       </nav>
     </header>
@@ -53,19 +48,19 @@
            <div class='slide-write'>
               <h1>Write</h1>
               <p>Our platform is the best opportunity for you to <br> <span class="identity">be heard </span>and develop</p>
-              <a class="start-now" href="">Start now</a>
+              <a class="start-now" href="pagination.html">Start now</a>
            </div>
            <div class='slide-read'>
               <h1>Read</h1>
               <p><span class="identity">Discover</span> amazing stories from all over the world,<br>
               get inspiration for your lifestyle
               </p>
-              <a class="start-now" href="">Start now</a>
+              <a class="start-now" href="pagination.html">Start now</a>
            </div class='slide-share'>
             <div>
               <h1>Share</h1>
               <p>Find the community which will accept your <br><span class="identity">ideas</span> and develop them</p>
-              <a class="start-now" href="">Start now</a>
+              <a class="start-now" href="pagination.html">Start now</a>
           </div>
         </div>
         </div>
@@ -82,62 +77,66 @@
 
   <div class="hot-stories-section">
     <h2>Hot stories:</h2>
+
     <div class="user-stories">
 
-      <a href="#" class="user-story first-story">
+      <a href="post.html" class="user-story first-story">
         <h3 class="story-title">What I learned from watching "Breaking Bad".</h3>
         <span class="story-author">by Jane Doe</span>
       </a>
       
 
-      <a href="#" class="user-story second-story">
+      <a href="post.html" class="user-story second-story">
         <h3 class="story-title">New generation of geeks.</h3>
         <span class="story-author">by Marcus Wisdom</span>
       </a>
       
 
-      <a href="#" class="user-story third-story">
+      <a href="post.html" class="user-story third-story">
         <h3 class="story-title">Third year in a row</h3>
         <span class="story-author">by Josh Potts</span>
       </a>
       
 
-      <a href="#" class="user-story fourth-story">
+      <a href="post.html" class="user-story fourth-story">
         <h3 class="story-title">How to increase popularity in social newtworks.</h3>
         <span class="story-author">by Annie Smith</span>
       </a>
       
-      <a href="#" class="user-story fifth-story">
+      <a href="post.html" class="user-story fifth-story">
         <h3 class="story-title">Experience of working abroad.</h3>
         <span class="story-author">by Thomas Dean</span>
       </a>
       
       
-      <a href="#" class="user-story sixth-story">
+      <a href="post.html" class="user-story sixth-story">
         <h3 class="story-title">Want to learn Javascript in 2016?</h3>
         <span class="story-author">by Wayne Williams</span>
       </a>
       
       
-      <a href="#" class="user-story seventh-story">
+      <a href="post.html" class="user-story seventh-story">
         <h3 class="story-title">Review on "Star Wars: Force Awakens."</h3>
         <span class="story-author">by Michael Bay</span>
       </a>
       
       
-      <a href="#" class="user-story eighth-story">
+      <a href="post.html" class="user-story eighth-story">
         <h3 class="story-title">What is crowdfunding?</h3>
         <span class="story-author">by Emilie Bardem</span>
       </a>
       
     </div>
+    <a class="see-all" href="pagination.html">See All</a>
   </div>
 
    <div class="stats-section">
   <!-- <div class="total">Total</div> -->
-      <div id="counter"></div>
+      <div id="counter">
+        <div data-num="734"  class="number">0</div>
+      </div>
       <div class='stories-told'>stories were told</div>
-      <div class="tell-story"><a class="start-now" href="#">Tell yours now</a></div>
+      <div class="tell-story"><a class="start-now" href="your-story.html">Tell yours now</a></div>
   </div>
 
   <div class="people-say-section">
@@ -190,19 +189,13 @@
   </div>  
 </div>  
 <footer class="main-footer">
-  <div class="copyright">&copy; 2015 Underline Inc. All Right Reserved</div>
+  <div class="copyright">&copy; 2015 Underline Inc. All Rights Reserved</div>
   <div class="icons">
     <a href="#"><img src="img/Facebook.svg" alt=""></a>
     <a href="#"><img src="img/Instagram.svg" alt=""></a>
     <a href="#"><img src="img/Twitter.svg" alt=""></a>
   </div>
 </footer>
-
-
-
-
-
-
 
 
 
@@ -247,42 +240,35 @@ setInterval(function() {
 
  <!-- Counter -->
 <script>
-
-
-  (function($) {
-  $.fn.jQuerySimpleCounter = function( options ) {
-      var settings = $.extend({
-          start:  0,
-          end:    100,
-          easing: 'swing',
-          duration: 400,
-          complete: ''
-      }, options );
-
-      var thisElement = $(this);
-
-      $({count: settings.start}).animate({count: settings.end}, {
-      duration: settings.duration,
-      easing: settings.easing,
-      step: function() {
-        var mathCount = Math.ceil(this.count);
-        thisElement.text(mathCount);
-      },
-      complete: settings.complete
-    });
-  };
-
- }(jQuery));
-
- $('#counter').jQuerySimpleCounter({
-      end:357,
-      duration: 15000
-    });
-
-
-
-
-
+  var time = 5, cc = 1;
+$(window).scroll(function(){
+  $('#counter').each(function(){
+    var
+    cPos=$(this).offset().top,
+    topWindow = $(window).scrollTop();
+    if(cPos < topWindow + 500){
+      if(cc < 2){
+        $('div').each(function(){
+          var 
+          i = 1,
+          num = $(this).data('num'),
+          step = 1000 * time / num,
+          that = $(this),
+          int = setInterval(function(){
+            if (i <= num) {
+              that.html(i);
+            }
+            else {
+              cc += 2
+              clearInterval(int);
+            }
+            i++;
+          },step);
+        });
+      }
+    }
+  });
+});
  
 </script>
 
